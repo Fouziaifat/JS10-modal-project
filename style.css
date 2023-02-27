@@ -1,0 +1,102 @@
+ @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+       
+}
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 4px;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 40px;
+}
+.open-popup-btn {
+    padding: 10px 30px;
+    margin: auto;
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-size: 15px;
+    border-radius: 25px;
+    background-color: #f1d3d98e;
+    border: #fff 2px solid;
+}
+.main {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-card {
+    width: 36vw;
+    height: 32vh;
+    background-color: #f1d3d98e;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -3 -3 6px rgb(0, 0, 0);
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(9px);
+}
+a {
+    text-decoration: none;
+}
+.popup-ovarlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.popup {
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36vw;
+    height: 36vh;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+    font-family: 'Mynerve', cursive;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.popup-ovarlay p {
+    text-align: center;
+}
+.popup h3 {
+    text-align: center;
+}
+.popup .popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+body.popup-active .popup {
+    top: 50%; 
+}
+body.popup-active .popup-ovarlay {
+    display: block;
+}
